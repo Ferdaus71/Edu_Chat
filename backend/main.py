@@ -6,7 +6,7 @@ from pymongo import MongoClient
 app = FastAPI()
 
 # MongoDB Atlas connection (replace with your URI)
-client = MongoClient("your_mongodb_atlas_uri")
+client = MongoClient("mongodb+srv://eduUser:<db_password>@edu-chatbot-cluster.lrz3iqz.mongodb.net/?retryWrites=true&w=majority&appName=edu-chatbot-cluster")
 db = client["edu_chatbot"]
 
 qa_pipeline = pipeline("question-answering", model="distilbert-base-uncased-distilled-squad")
